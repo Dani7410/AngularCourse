@@ -7,6 +7,8 @@ import { Component } from "@angular/core";
     templateUrl: './server.component.html'
 })
 export class ServerComponent{
+    
+    //Dette export sørger for at data og metoder kan tilgås fra Html templaten
     serverId = 10;
     serverStatus = 'offline';
 
