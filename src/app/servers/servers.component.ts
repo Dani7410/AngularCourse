@@ -15,7 +15,12 @@ export class ServersComponent implements OnInit {
   
   allowNewServer = false;
   serverCreationStatus = 'No server was created';
-  serverName = '';
+  serverName = 'Testserver';
+  serverCreated = false;
+
+  //practice databinding
+  userCreationStatus = 'No username added';
+  userName = '';
   //
   constructor() { 
     setTimeout(() => {
@@ -27,13 +32,22 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer(){
-    this.serverCreationStatus = 'Server was created';
+    this.serverCreated = true;
+    this.serverCreationStatus = 'Server was created! The server name is: ' + this.serverName;
     console.log('Logged correctly')
   }
-
+  //Event binding that passed $event to an output from an input field
+  //Denne metode fetcher data fra event(input field) og parser dataen til en string som vi outputter
   onUpdateServer(event: any){
     this.serverName = (<HTMLInputElement>event.target).value;
 
   }
+
+  onCreateUserName(event: Event){
+    this.userCreationStatus = 'Your username is: ' + this.userName
+    this.userName = (<HTMLInputElement>event.target).value 
+    this.userName = ''
+  }
+
 
 }

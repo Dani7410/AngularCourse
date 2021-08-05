@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 //For at NgModule kan genkende components skal de importeres fra deres export typescript klasse
@@ -15,11 +16,13 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
     ServerComponent,
     ServersComponent,
     SuccesAlertComponent,
-    WarningAlertComponent
+    WarningAlertComponent,
+    
   ],
   //imports tillader flere modules, men er sjældent nødvendigt
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

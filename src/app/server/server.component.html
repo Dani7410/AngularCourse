@@ -1,2 +1,2 @@
-<p>{{'Server'}} with id: {{ serverId }} is {{getServerStatus()}} </p>
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: serverStatus === 'online'}">{{'Server'}} with id: {{ serverId }} is {{getServerStatus()}} </p>
 <!-- Her bruges databinding til at binde data fra servers.ts klassen sammen for outpu -->
