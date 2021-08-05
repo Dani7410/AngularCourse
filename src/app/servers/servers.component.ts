@@ -17,6 +17,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created';
   serverName = 'Testserver';
   serverCreated = false;
+  servers = ['Testserver', 'Testserver 2'];
 
   //practice databinding
   userCreationStatus = 'No username added';
@@ -33,6 +34,7 @@ export class ServersComponent implements OnInit {
 
   onCreateServer(){
     this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'Server was created! The server name is: ' + this.serverName;
     console.log('Logged correctly')
   }

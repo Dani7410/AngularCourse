@@ -13,8 +13,8 @@ Data, Kan opdatere deres property i selve server.ts klassen -->
 <ng-template #noServer><p>No server was created</p></ng-template> -->
 <p *ngIf="serverCreated">Server was created, server name is: {{serverName}}</p>
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
+
 
 <label>Type your Username</label>
 <input type="text" class="form-control" [(ngModel)]="userName">
