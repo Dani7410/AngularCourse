@@ -23,4 +23,13 @@ Data, Kan opdatere deres property i selve server.ts klassen -->
 <p>{{userCreationStatus}}</p>
 
 
+<hr>
+<label > Directives</label><br>
+<button class="btn btn-primary" (click)="showDetails()" >Details</button>
+<p *ngIf="detailShown">Secret passsword = tuna</p>
+<div *ngFor="let log of numberLog; let i = index" [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}" [ngClass]="{'white-text': i >= 4}">{{log}}</div>
+
+
+
+
 

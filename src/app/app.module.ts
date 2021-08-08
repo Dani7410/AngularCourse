@@ -9,6 +9,7 @@ import { ServersComponent } from './servers/servers.component';
 import { SuccesAlertComponent } from './succes-alert/succes-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 
+
 @NgModule({
   declarations: [
     //Her tilføjes components efter deres export navn. 
@@ -17,6 +18,7 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
     ServersComponent,
     SuccesAlertComponent,
     WarningAlertComponent,
+    
     
   ],
   //imports tillader flere modules, men er sjældent nødvendigt

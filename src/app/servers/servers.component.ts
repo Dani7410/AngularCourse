@@ -23,6 +23,11 @@ export class ServersComponent implements OnInit {
   userCreationStatus = 'No username added';
   userName = '';
   //
+  
+  //Practice Directives
+  detailShown = false;
+  numberLog = [];
+
   constructor() { 
     setTimeout(() => {
       this.allowNewServer = true
@@ -50,6 +55,15 @@ export class ServersComponent implements OnInit {
     this.userName = (<HTMLInputElement>event.target).value 
     this.userName = ''
   }
+
+  showDetails(){
+    this.detailShown = !this.detailShown
+    // this.numberLog.push(this.numberLog.length + 1)
+    this.numberLog.push(new Date())
+    
+  }
+
+  
 
 
 }
